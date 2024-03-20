@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Miłosz Musielak">
+  <title>Strona Główna</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body id="body">
+  <nav class="menu-mobile">
+    <a class="logo-mobile" href="./index.html"><img class="img-nav-mobile invert" src="./image/logo.png" alt=""></a>
+    <button id="toggleButton" class="menu-mobile"><img class="img-nav-mobile invert" src="./image/menu.png" alt=""></button>
+    <ul id="menu" class="menu-list-mobile first unactive off">
+      <span id="toggleOff">
+      <li><a href="#aboutus">O nas</a></li>
+      <li><a href="#products">Produkty</a></li>
+      <li><a href="#contacts">Kontakt</a></li>
+    </span>
+    </ul>
+  </nav>
+  <nav class="menu-standard">
+    <a href="./index.html" class="logo-icon"><img class="logo-icon invert" src="./image/logo.png" alt=""></a>
+    <a class="menu-text aboutus" href="#aboutus">O nas</a>
+    <a class="menu-text recipes" href="#products">Produkty</a>
+    <a class="menu-text contacts" href="#contacts">Kontakt</a>
+    </nav>
+
+    <header>
+      <div id="one">
+        <span>
+          <h1 class="bold">Najlepsza Birzuteria</h1>
+          <h2 id="aboutus" class="bold">Tylko u nas</h2>
+        </span>
+      </div>
+    </header>
+    
+
+
+    <main>  
+      <!-- Sekcja o nas-->
+      <section class="aboutus">
+        <h2 class="aboutus">O Nas</h2>
+        <section id="two">
+          <div class="text-bg">
+          <h2 class="bold">
+            Dlaczego my?
+          </h2>
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Mollitia quae harum voluptas itaque molestiae </p>
+        </div>
+        </section>
+        <section id="three">
+          <div class="text-bg">
+            <h2 class="bold">Historia Firmy</h2>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptate quaerat non aliquid. Rem incidunt nesciunt, optio sequi, ex accusamus a sit dolorem quaerat minima quam et laboriosam ea eaque dolore!</p>
+          </div>
+        <p id="products"></p>
+        </section>
+  
+      </section>
+      
+      <!--Sekcja produktów-->
+      <section class="products">
+        <h2>Produkty</h2>
+        <table>
+          <tr class="first">
+            <td class="first">
+              <div>
+                <img src="./image/kolczyki z perłami.png" alt="">
+                <img class="sold" src="./image/out-of-stock.png" alt="">
+                <p>Białe Krągłe Gwoździe</p>
+                <span class="cena">&#36;1999,99</span>
+              </div>
+            </td>
+            <td class="second">
+              <div>
+                <img src="./image/michał_naszyjnik.png" alt="">
+                <img class="sold" src="./image/out-of-stock.png" alt="">
+                <p>Michał Naszyjnik</p>
+                <span class="cena">&#36;5,99</span>
+              </div>
+            </td>
+          </tr>
+          <tr class="second">
+            <td class="first">
+                <div>
+                  <img src="./image/łańcuch.png" alt="">
+                <img class="sold invert" src="./image/out-of-stock.png" alt="">
+                  <p>Jakiś Szyjnik</p>
+                  <span class="cena">&#36;98892,91 <span class="small">*czarnuch nie w zestawie</span></span>
+                  
+                </div>
+            </td>
+            <td class="second">
+              <div>
+                <img src="./image/Fioletowy pierścień z rubinem.png" alt="">
+                <img class="sold" src="./image/out-of-stock.png" alt="">
+                <p>Pierścień z Kamieniem</p>
+                <span class="cena">&#36;48209,29</span>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div>
+                <img src="./image/piesdiament.png" alt="">
+                <img class="sold invert" src="./image/out-of-stock.png" alt="">
+
+                <p>Pies Obroża Diament</p>
+                <span class="cena">&#36;32801,22</span>
+              </div>
+            </td>
+            <td>
+              <div>
+                <img src="./image/branzolet.png" alt="">
+                <img class="sold" src="./image/out-of-stock.png" alt="">
+
+                <p>Branzol</p>
+                <span class="cena">&#36;909,42</span>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div>
+                <img src="./image/różowy pierścień.png" alt="">
+                <img class="sold" src="./image/out-of-stock.png" alt="">
+
+                <p>Pierścień Różu</p>
+                <span class="cena">&#36;1000000,99</span>
+              </div>
+            </td>
+            <td>
+              <div>
+                <img src="./image/czarny_mankiety.png" alt="">
+                <img class="sold invert" src="./image/out-of-stock.png" alt="">
+
+                <!--Wiem jak wygląda to zdjęcie, nie mogłem wygenerować lepszego-->
+                <p>Kwadratowe Mankiety</p>
+                <span class="cena">&#36;1902,99</span>
+              </div>
+            </td>
+          </tr>
+        </table>
+        
+      </section>
+      <section id="contacts" class="contacts">
+        <div>
+          <h2>Formularz kontaktowy</h2>
+          <div id="send_form">
+            <form>
+              <div><label for="name">Imię i nazwisko</label></div>
+              <div><input type="text" name="name" id="name" class="formField" /></div>
+              <div><label for="phone">Numer telefonu</label></div>
+              <div><input type="number" name="phone" id="phone" class="formField" /></div>
+              <div><label for="email">Adres email</label></div>
+              <div><input type="email" name="email" id="email" class="formField" /></div>
+              <div><label for="message">Treść wiadomości</label></div>
+              <div><textarea name="message" id="message" class="formField"></textarea></div>
+              <div><button>Wyślij</button></div>
+            </form>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. &#169;.</p>
+      </div>
+    </footer>
+
+  <script src="./script.js"></script>
+</body>
+</html>

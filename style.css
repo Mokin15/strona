@@ -1,0 +1,674 @@
+:root{
+  --nav-color: rgb(80, 0, 80);
+  --h2-bgcolor: rgb(129, 38, 141);
+  --body-gbcolor: #c9bdce;
+  --body--bgcolor-dark: #be9ccc;
+}
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  color: white;
+}
+
+html, body {
+  width: 100vw;
+  height: 100vh;
+  background-color: #c9bdce;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  
+}
+
+img.invert{
+  filter: invert(100%);
+}
+
+.bold{
+  font-weight: bold;
+}
+
+@media (max-width: 767px) {
+  nav.menu-standard{display: none;}
+  nav.menu-mobile {
+    display: grid;
+    height: 54px;
+    width: 100%;
+    background-color: var(--nav-color);
+    grid-template-columns: 58px 1fr 58px;
+    grid-template-rows: 54px 190px;
+    position: fixed;
+  }
+
+  body.display--grid{
+    grid-template-rows: 54px 1fr 1fr ;
+  }
+
+  section.bg-pic, header{
+    width: 100vw;
+    padding: 0px;
+
+  }
+  section.bg-pic img, section.bg-pic div.gradient{
+    height: auto;
+    width: 100%;
+  }
+
+  img.img-nav-mobile {
+    padding: 2px;
+    height: 50px;
+    
+  }
+
+  a.logo-mobile,
+  button.menu-mobile {
+    width: 54px;
+    height: 54px;
+  }
+
+  button.menu-mobile {
+    border: none;
+    background: none;
+    grid-column: -1 / -2;
+  }
+
+  ul.menu-list-mobile li a {
+    text-decoration: none;
+    color: white;
+    font-size: 2.5rem;
+  }
+
+  ul.menu-list-mobile li {
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+  }
+
+  ul.menu-list-mobile {
+    list-style-type: none;
+    background-color: rgba(0, 0, 0, 60%);
+    height: 215px;
+    width: 100%;
+    grid-row: -1 / -2;
+    grid-column: -1 / -4;
+    justify-content: center;
+    transition: all ease-in-out;
+  }
+
+  a.logo-mobile {
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+
+  header{
+    display: flex;
+    flex-wrap: wrap;
+    height: 25%;
+    justify-content: center;
+  }
+
+  div#one{
+    height: 100%;
+    width: 100%;
+    background-image: url(./image/łańcuch.png);
+    text-align: center;
+  }
+
+div#one span{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  background-color: #00000048;
+  height: 100%;
+  width: 100%;
+  
+}
+
+div#one h2{
+  margin-left: 20%;
+  margin-right: 20%;
+}
+
+main h2.aboutus{
+  margin-top: 1rem;
+  padding: .5rem;
+  font-size: 4rem;
+  text-align: center;
+  color: white;
+  background-color: var(--h2-bgcolor);
+}
+main p, main h2{
+  color: var(--h2-bgcolor);
+}
+section#two{
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+section#two p{
+margin-top: 1rem;
+text-align: center;  
+}
+
+div.text-bg{
+  padding: .75rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;  
+}
+section#three{
+  margin-top:3rem;
+  text-align: center;
+}
+section#three p{
+  margin-top: 1rem;
+}
+section.products{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+section.products div{
+  display: grid;
+  grid-template-rows: 1fr auto auto;
+}
+section.products img{
+  grid-column: 1/2;
+  grid-row: 1/2;
+}
+img.sold{
+  opacity: 0;
+  grid-row: 1/2;
+  transition: all .5s linear;
+}
+
+section.products table{
+  max-width: 100%;
+}
+section.products h2{
+  background-color: var(--h2-bgcolor);
+  width: 100%;
+  font-size: 4rem;
+  color: white;
+  text-align: center;
+  padding: .5rem;
+}
+
+section.products table img{
+  max-width: 20rem;
+  width: 100%;
+  height: auto;
+  
+}
+
+section.products td{
+background-color: var(--body--bgcolor-dark);
+width: 50%;
+display: grid;
+}
+section.products tr{
+ display: flex; 
+}
+span.small{
+  font-size: .25rem;
+}
+span.cena{
+  font-size: .9rem;
+}
+
+section.contacts h2{
+  background-color: var(--h2-bgcolor);
+  width: 100%;
+  font-size: 2rem;
+  color: white;
+  text-align: center;
+  
+}
+section.contacts form{
+  padding: .5rem;
+  background-color: var(--body--bgcolor-dark);
+}
+
+.formField{
+color: black;
+}
+textarea.formField{
+  width: 100%;
+  height: 6rem;
+}
+
+footer{
+  height: auto;
+  background-color: var(--nav-color);
+  text-align: center;
+  padding: 1rem;
+}
+
+table div:active img.sold{
+  animation: sold-out 1.5s;
+}
+  @keyframes sold-out {
+    from{
+      opacity: 0;
+    }
+    50%{
+      opacity: 1;
+    }
+    to{
+      opacity: 0;
+    }
+  }
+
+
+  @keyframes menu_show {
+    from {
+      opacity: 0;
+      transform: translateY(-50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes menu_hide {
+    from {
+      opacity: 1;
+      transform: translateY(0);
+      visibility: visible;
+    }
+    to {
+      opacity: 0;
+      transform: translateY(-50px);
+      visibility: hidden;
+    }
+  }
+
+  #menu.active {
+    display: flex;
+    animation: menu_show 0.5s ease forwards;
+  }
+
+  #menu.unactive {
+    animation: menu_hide 0.5s ease forwards;
+  }
+
+  #menu.first {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) and (max-width:1440px){
+  nav.menu-mobile{
+    display: none;
+  }
+
+  nav.menu-standard{
+    width: 100%;
+    height: 6rem;
+    background-color: var(--nav-color);
+    position: fixed;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr) ;
+    grid-template-rows: 6rem;
+    grid-template-areas: "icon . a b c";
+  }
+   a.logo-icon{
+    width: 6rem;
+    height: 6rem;
+    justify-self: center;
+    grid-area: icon;
+  }
+  img.logo-icon{
+    width: 5rem;
+    height: 5rem;
+    padding: .5rem;
+
+  }
+  a.menu-text{
+    font-size: 3rem;
+    text-decoration: none;
+    color: white;
+    width: 200px;
+    text-align: center;
+    padding-top: 1rem;
+    margin-right: 1rem;
+    margin-left: 1rem;
+  }
+  a.aboutus{
+    grid-area: a;
+  }
+  a.recipes{
+    grid-area: b;
+  }
+  a.contacts{
+    grid-area: c;
+  }
+
+
+    div#one{
+      height: 50rem;
+      display: flex;
+      justify-content: center;
+      text-align: center;
+      background-image: url(./image/łańcuch.png);
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    div#one span{
+      background-color: #00000048;
+      width: 100%;
+    }
+    div#one h1{
+      margin-top: 12rem;
+      font-size: 8rem;
+    }
+    div#one h2{
+      font-size: 6rem;
+    }
+  section.products img{
+    height: auto;
+    width: 95%;
+    padding: 2.5%;
+  }
+  main h2.aboutus, section.products h2, section.contacts h2{
+    margin-top: 1rem;
+    font-size: 4rem;
+    text-align: center;
+    color: white;
+    background-color: var(--h2-bgcolor);
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+  section.products h2{
+    width: 100%;
+  }
+  main h2{
+    font-size: 3rem;
+    text-align: center;
+    color: var(--h2-bgcolor);
+  }
+  section.aboutus p{
+    margin-top: .5rem;
+    padding-left: 15%;
+    padding-right: 15%;
+    text-align: center;
+    font-size: 1.25rem;
+    color: var(--h2-bgcolor);
+  }
+  section.products table{
+    max-width: 1000px;
+    height: auto;
+  }
+
+  section.products{
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+}
+section.products table div{
+  background-color: var(--body--bgcolor-dark);
+}
+
+
+section.products div{
+  display: grid;
+  grid-template-rows: 1fr auto auto;
+}
+section.products img{
+  grid-column: 1/2;
+  grid-row: 1/2;
+}
+img.sold{
+  opacity: 0;
+  grid-row: 1/2;
+  transition: all .5s linear;
+}
+section.products p, section.products span{
+  padding-bottom: .4rem;
+  padding-left: .4rem;
+  font-size: 1.5rem;
+}
+
+section.products span.small{
+  font-size: .25rem;
+}
+
+section.contacts form{
+  padding: .5rem;
+  background-color: var(--body--bgcolor-dark);
+}
+
+.formField{
+color: black;
+}
+textarea.formField{
+  width: 100%;
+  height: 6rem;
+}
+
+
+
+footer{
+  background-color: var(--nav-color);
+  height: 4rem;
+}
+footer div{
+  width: 100%;
+  height: 100%;
+}
+
+footer div p{
+  flex-wrap: wrap;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-content: center;
+}
+
+table div:hover img.sold{
+  animation: sold-out 1.5s;
+}
+  @keyframes sold-out {
+    from{
+      opacity: 0;
+    }
+    50%{
+      opacity: 1;
+    }
+    to{
+      opacity: 0;
+    }
+  }
+
+
+}
+
+
+@media (min-width: 1441px) {
+  nav.menu-mobile{
+    display: none;
+  }
+
+  nav.menu-standard{
+    display: grid;
+    background-color: var(--nav-color);
+    grid-template-rows: 6rem;
+    grid-template-columns: repeat(7, 1fr) ;
+    height: 6rem;
+    width: 100%;
+    grid-template-areas: ". a . b c d .";
+  }
+  a.logo-icon{
+    width: 4rem;
+    grid-area: a;
+  }
+  img.logo-icon{
+    width: 4rem;
+   padding: 1rem;
+  }
+  .aboutus{
+    grid-area: b;
+  }
+  .recipes{
+    grid-area: c;
+  }
+  .contacts{
+    grid-area: d;
+  }
+  a.menu-text{
+    display: flex;
+    font-size: 4rem;
+    text-decoration: none;
+    color: #fff;
+    justify-content: center;
+    align-items: center;
+  }
+
+
+
+  div#one{
+    height: 50rem;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    background-image: url(./image/łańcuch.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  div#one span{
+    background-color: #00000048;
+    width: 100%;
+  }
+  div#one h1{
+    margin-top: 12rem;
+    font-size: 8rem;
+  }
+  div#one h2{
+    font-size: 6rem;
+  }
+section.products img{
+  height: auto;
+  width: 95%;
+  padding: 2.5%;
+}
+main h2.aboutus, section.products h2, section.contacts h2{
+  margin-top: 1rem;
+  font-size: 4rem;
+  text-align: center;
+  color: white;
+  background-color: var(--h2-bgcolor);
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+section.products h2{
+  width: 100%;
+}
+main h2{
+  font-size: 3rem;
+  text-align: center;
+  color: var(--h2-bgcolor);
+}
+section.aboutus p{
+  margin-top: .5rem;
+  padding-left: 15%;
+  padding-right: 15%;
+  text-align: center;
+  font-size: 1.25rem;
+  color: var(--h2-bgcolor);
+}
+section.products table{
+  max-width: 1000px;
+  height: auto;
+}
+
+section.products{
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+}
+section.products table div{
+background-color: var(--body--bgcolor-dark);
+}
+
+
+section.products div{
+display: grid;
+grid-template-rows: 1fr auto auto;
+}
+section.products img{
+grid-column: 1/2;
+grid-row: 1/2;
+}
+img.sold{
+opacity: 0;
+grid-row: 1/2;
+transition: all .5s linear;
+}
+section.products p, section.products span{
+padding-bottom: .4rem;
+padding-left: .4rem;
+font-size: 1.5rem;
+}
+
+section.products span.small{
+font-size: .25rem;
+}
+
+section.contacts form{
+padding: .5rem;
+background-color: var(--body--bgcolor-dark);
+}
+
+.formField{
+color: black;
+}
+textarea.formField{
+width: 100%;
+height: 6rem;
+}
+
+
+
+footer{
+background-color: var(--nav-color);
+height: 4rem;
+}
+footer div{
+width: 100%;
+height: 100%;
+}
+
+footer div p{
+flex-wrap: wrap;
+width: 100%;
+height: 100%;
+display: flex;
+justify-content: center;
+text-align: center;
+align-content: center;
+}
+
+table div:hover img.sold{
+animation: sold-out 1.5s;
+}
+@keyframes sold-out {
+  from{
+    opacity: 0;
+  }
+  50%{
+    opacity: 1;
+  }
+  to{
+    opacity: 0;
+  }
+}
+
+}
