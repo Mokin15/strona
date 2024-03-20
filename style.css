@@ -112,7 +112,7 @@ img.invert{
   div#one{
     height: 100%;
     width: 100%;
-    background-image: url(./image/łańcuch.png);
+    background-image: url(./łańcuch.png);
     text-align: center;
   }
 
@@ -356,7 +356,7 @@ table div:active img.sold{
       display: flex;
       justify-content: center;
       text-align: center;
-      background-image: url(./image/łańcuch.png);
+      background-image: url(./łańcuch.png);
       background-repeat: no-repeat;
       background-size: cover;
     }
@@ -539,7 +539,7 @@ table div:hover img.sold{
     display: flex;
     justify-content: center;
     text-align: center;
-    background-image: url(./image/łańcuch.png);
+    background-image: url(./łańcuch.png);
     background-repeat: no-repeat;
     background-size: cover;
   }
